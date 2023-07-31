@@ -16,7 +16,7 @@ int main (void)
 	size_t n;
 
 	head = &hello;
-	new = malloc(malloc(sizeof(list_t));
+	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{ 
 		printf("Error\n");
@@ -30,12 +30,13 @@ int main (void)
 	printf("-> %lu elements\n", n);
 
 	printf("\n");
-	free(new->str) = NULL;
+	free(new->str);
+	new->str = NULL;
 	n = print_list(head);
 	printf("-. %lu elements\n", n);
 
 	free(new);
 
-	return (0) ;
+	return (0);
 }
 
