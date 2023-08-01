@@ -9,15 +9,15 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *new_node, *free_listint;
+	listint_t *brandnew, *final;
 
-	new_node = head;
-
-	while (new_node != NULL)
+	brandnew = head;
+	
+	while (brandnew != NULL)
 	{
-		free_listint = new_node;
-		free(new_node);
-		new_node = free_listint;
+		final = brandnew->next;
+		free(brandnew);
+		brandnew = final;
 	}
 
 }
