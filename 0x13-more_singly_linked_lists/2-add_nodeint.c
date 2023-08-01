@@ -21,7 +21,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	{
 		return (NULL);
 	}
-	
+
 	listint_t *another_node = (listint_t *)malloc(sizeof(listint_t));
 
 	another_node->n = n;
