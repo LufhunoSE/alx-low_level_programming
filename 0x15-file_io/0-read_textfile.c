@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	
+
 	docket = fopen(filename, "r");
 	if (docket == NULL)
 		return (0);
@@ -30,7 +30,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	leeinput = fread(cushion, sizeof(char), letters, docket);fclose(docket);
+	leeinput = fread(cushion, sizeof(char), letters, docket);
+
+	fclose(docket);
 
 	if (leeinput == 0)
 	{
